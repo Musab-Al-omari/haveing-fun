@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include('layout/head') %>
+</head>
+
+<body>
+    <header>
+        <%-include('layout/header') %>
+    </header>
+    <main>
+        <section class="card">
+
+            <h3>TotalConfirmed":<%= homePageResult.TotalConfirmed %>
+            </h3>
+            <h3>TotalDeaths":<%= homePageResult.TotalDeaths %>
+            </h3>
+            <h3>TotalRecovered":<%= homePageResult.TotalRecovered %>
+            </h3>
+
+        </section>
+        <section>
+            <form action="/" method="post">
+            <label for="country">search for a country</label>
+            <input type="text" name="country">
+            <br>
+            <label for="from"></label>
+            <input type="date" name="to">
+            <br>
+            <label for="to"></label>
+            <input type="date" name="to">
+            <br>
+            <button>search</button>
+            
+            
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>

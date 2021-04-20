@@ -1,0 +1,19 @@
+h1, nav {
+    background-color: aqua;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.cardss {
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(0, 174, 255);
+    padding: 10px;
+    margin-top: 2%;
+}
+#hide{
+    display: none;
+}

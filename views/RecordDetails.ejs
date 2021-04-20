@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('layout/head') %>
+</head>
+
+<body>
+    <header>
+        <%- include('layout/header') %>
+    </header>
+
+    <main>
+
+
+
+        <section class="cardss">
+
+            <h3>Country:-
+                <%= element.country %>
+            </h3>
+            <h3>TotalConfirmed:-
+                <%= element.totalconfirmed %>
+            </h3>
+            <h3>TotalDeaths;-
+                <%= element.totaldeaths %>
+            </h3>
+            <h3>TotalRecovered:-
+                <%= element.totalrecovered %>
+            </h3>
+            <h3>Date:-
+                <%= element.thedate %>
+            </h3>
+            <form action="/detail/<%= element.id %>?_method=DELETE" method="POST">
+                <button>delete</button>
+            </form>
+            <button onclick="musab()">update</button>
+            <br>
+            <form action="/detail/<%= element.id %>?_method=PUT" method="POST" id="hide">
+                <input type="text" name="country" value="<%= element.country %>">
+                <input type="text" name="totalconfirmed" value="<%= element.totalconfirmed %>">
+                <input type="text" name="totaldeaths" value="<%= element.totaldeaths %>">
+                <input type="text" name="totalrecovered" value="<%= element.totalrecovered %>">
+                <input type="text" name="thedate" value="<%= element.thedate %>">
+                <button>save</button>
+            </form>
+
+
+
+        </section>
+
+    </main>
+    <footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+            <script>
+function musab() {
+
+    $('#hide').toggle()
+    
+}
+            </script>    
+            </footer>
+</body>
+
+</html>

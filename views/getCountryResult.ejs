@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('layout/head') %>
+</head>
+
+<body>
+    <header>
+        <%- include('layout/header') %>
+    </header>
+    <h2><%= searchArray[0].Country %> </h2>
+    <main>
+        <% searchArray.forEach(element=> {%>
+
+            <section>
+                <!-- date and the total number of confirmed cases  -->
+
+
+
+                <h3>The Date:<%= element.Date %> & The Cases:<%= element.Cases %>
+                </h3>
+
+
+
+            </section>
+            <% }); %>
+    </main>
+
+</body>
+
+</html>

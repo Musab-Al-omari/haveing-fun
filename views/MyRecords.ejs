@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('layout/head') %>
+</head>
+
+<body>
+    <header>
+        <%- include('layout/header') %>
+    </header>
+
+    <main>
+
+
+        <% MyRecordsArray.forEach(element=> {%>
+            <section class="cardss">
+
+                <h3>Country:-
+                    <%= element.country %>
+                </h3>
+                <h3>TotalConfirmed:-
+                    <%= element.totalconfirmed %>
+                </h3>
+                <h3>TotalDeaths;-
+                    <%= element.totaldeaths %>
+                </h3>
+                <h3>TotalRecovered:-
+                    <%= element.totalrecovered %>
+                </h3>
+                <h3>Date:-
+                    <%= element.thedate %>
+                </h3>
+                <form action="/detail/<%= element.id %>" method="GET">
+                    <button>more sttinngs</button>
+                </form>
+
+
+
+            </section>
+            <% }); %>
+    </main>
+
+</body>
+
+</html>
